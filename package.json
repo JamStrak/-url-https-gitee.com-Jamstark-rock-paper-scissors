@@ -1,10 +1,16 @@
-﻿{
-  "name": "rock-paper-scissors",
-  "version": "0.1.0",
-  "engines": {
-    "node": ">=14.0.0"
-  },
+{
+  "name": "backend",
+  "version": "1.0.0",
+  "main": "server.js",
   "scripts": {
-    "start": "cd backend && node server.js"
+    "start": "node server.js",
+    "dev": "nodemon server.js"
+  },
+  "dependencies": {
+    "express": "^4.21.2",
+    "socket.io": "^4.8.1"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.15"
   }
 }
