@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>酒吧剪刀石头布</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <div class="container">
+        <!-- 游戏大厅 -->
+        <div id="lobby" class="screen">
+            <h1>欢迎来到趣味对战</h1>
+            <div class="table-info">
+                <label>您的桌号：</label>
+                <input type="number" id="myTable" min="1">
+            </div>
+            <div class="challenge-form">
+                <label>挑战桌号：</label>
+                <input type="number" id="targetTable" min="1">
+                <select id="prizeAmount">
+                    <option value="9.9">9.9元</option>
+                    <option value="19.9">19.9元</option>
+                    <option value="29.9">29.9元</option>
+                </select>
+                <button id="challengeBtn">发起挑战</button>
+            </div>
+        </div>
+
+        <!-- 游戏界面 -->
+        <div id="game" class="screen hidden">
+            <div class="game-info">
+                <div class="score">比分: <span id="score">0 - 0</span></div>
+                <div class="round">第 <span id="round">1</span> 局</div>
+                <div class="timer" id="timer">准备...</div>
+            </div>
+            
+            <div class="game-area">
+                <div class="choices">
+                    <button class="choice" data-choice="rock">?</button>
+                    <button class="choice" data-choice="paper">?</button>
+                    <button class="choice" data-choice="scissors">??</button>
+                </div>
+                
+                <div class="result" id="result"></div>
+            </div>
+        </div>
+    </div>
+    <script src="/socket.io/socket.io.js"></script>
+    <script src="js/game.js"></script>
+</body>
+</html>
