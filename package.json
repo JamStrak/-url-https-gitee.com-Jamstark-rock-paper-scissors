@@ -1,0 +1,10 @@
+﻿{
+  "name": "rock-paper-scissors",
+  "version": "0.1.0",
+  "engines": {
+    "node": ">=14.0.0"
+  },
+  "scripts": {
+    "start": "cd backend && node server.js"
+  }
+}

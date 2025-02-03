@@ -1,0 +1,9 @@
+﻿services:
+  - type: web
+    name: rock-paper-scissors
+    env: node
+    buildCommand: cd backend && npm install
+    startCommand: cd backend && node server.js
+    envVars:
+      - key: PORT
+        value: 3000
